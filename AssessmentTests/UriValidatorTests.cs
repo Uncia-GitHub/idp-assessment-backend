@@ -95,5 +95,15 @@ namespace AssessmentTests
 
             Assert.AreEqual(true, isValid);
         }
+
+        [TestMethod]
+        public void UriValidator_literalRegexUri2_true()
+        {
+
+            var validator = new UriValidator();
+            var isValid = validator.Validate("https://auth.confirmit.com/login/logincallback", validationRules); // expected true
+
+            Assert.AreEqual(true, isValid);
+        }
     }
 }
