@@ -66,5 +66,15 @@ namespace AssessmentTests
             Assert.AreEqual(true, isValid);
         }
 
+        [TestMethod]
+        public void UriValidator_wildcardUri5()
+        {
+
+            var validator = new UriValidator();
+            var isValid = validator.Validate("https://app.confirmit.com/auth/folder/logincallback", validationRules); // expected true
+
+            Assert.AreEqual(true, isValid);
+        }
+
     }
 }
