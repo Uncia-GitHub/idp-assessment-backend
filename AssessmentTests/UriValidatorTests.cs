@@ -67,7 +67,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri5()
+        public void UriValidator_wildcardUri5_true()
         {
 
             var validator = new UriValidator();
@@ -77,13 +77,23 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri6()
+        public void UriValidator_wildcardUri6_false()
         {
 
             var validator = new UriValidator();
             var isValid = validator.Validate("https://confirmit.com/logincallback", validationRules); // expected false
 
             Assert.AreEqual(false, isValid);
+        }
+
+        [TestMethod]
+        public void UriValidator_literalRegexUri1_true()
+        {
+
+            var validator = new UriValidator();
+            var isValid = validator.Validate("https://login.confirmit.com/app/logincallback", validationRules); // expected true
+
+            Assert.AreEqual(true, isValid);
         }
     }
 }
