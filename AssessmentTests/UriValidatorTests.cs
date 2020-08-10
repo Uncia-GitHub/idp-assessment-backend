@@ -16,7 +16,7 @@ namespace AssessmentTests
 
 
         [TestMethod]
-        public void UriValidator_AbsoluteUri1()
+        public void UriValidator_AbsoluteUri()
         {
 
             var validator = new UriValidator();
@@ -26,7 +26,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri1_true()
+        public void UriValidator_wildcardUri_true()
         {
 
             var validator = new UriValidator();
@@ -36,7 +36,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri2_false()
+        public void UriValidator_wildcardUri2_wrongDomain_false()
         {
 
             var validator = new UriValidator();
@@ -47,7 +47,7 @@ namespace AssessmentTests
 
 
         [TestMethod]
-        public void UriValidator_wildcardUri3_true()
+        public void UriValidator_wildcardUri3_withFolder_true()
         {
 
             var validator = new UriValidator();
@@ -57,7 +57,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri4_true()
+        public void UriValidator_wildcardUri4_withFolder1_true()
         {
 
             var validator = new UriValidator();
@@ -67,7 +67,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri5_true()
+        public void UriValidator_wildcardUri_pathWithSeveralFolder_true()
         {
 
             var validator = new UriValidator();
@@ -77,7 +77,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri6_false()
+        public void UriValidator_wildcardUri_withoutSubdomen_false()
         {
 
             var validator = new UriValidator();
@@ -87,7 +87,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_literalRegexUri1_true()
+        public void UriValidator_literalRegexUri1_withFolder_true()
         {
 
             var validator = new UriValidator();
@@ -97,7 +97,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_literalRegexUri2_true()
+        public void UriValidator_literalRegexUri2_withFolder1_true()
         {
 
             var validator = new UriValidator();
@@ -107,7 +107,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_literalRegexUri3_true()
+        public void UriValidator_literalRegexUri_pathWithSeveralFolder_true()
         {
 
             var validator = new UriValidator();
@@ -117,7 +117,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_literalRegexUri4_true()
+        public void UriValidator_literalRegexUri_withoutSubdomen_true()
         {
 
             var validator = new UriValidator();
@@ -127,7 +127,7 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_literalRegexUri5()
+        public void UriValidator_literalRegexUri_wrongdomain_false()
         {
 
             var validator = new UriValidator();
