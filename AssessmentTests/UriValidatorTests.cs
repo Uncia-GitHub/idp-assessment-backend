@@ -26,13 +26,23 @@ namespace AssessmentTests
         }
 
         [TestMethod]
-        public void UriValidator_wildcardUri1()
+        public void UriValidator_wildcardUri1_true()
         {
 
             var validator = new UriValidator();
             var isValid = validator.Validate("https://www.confirmit.com/webapp/login", validationRules); // expected true
 
             Assert.AreEqual(true, isValid);
+        }
+
+        [TestMethod]
+        public void UriValidator_wildcardUri2_false()
+        {
+
+            var validator = new UriValidator();
+            var isValid = validator.Validate("https://www.confirmit.net/webapp/login", validationRules); // expected false
+
+            Assert.AreEqual(false, isValid);
         }
     }
 }
